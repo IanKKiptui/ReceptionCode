@@ -1,0 +1,77 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package reception;
+
+/**
+ *
+ * @author Kiptui Ian Kipchumba - 091292
+ */
+import javax.swing.JButton;
+import javax.swing.JFrame;//lib
+import javax.swing.JLabel;
+import javax.swing.JPassword;
+import javax.swing.JTextField;
+
+
+public class login {
+    
+JFrame frame;//frame
+JTextField field;//obtain username
+JPassword ps;//password
+JLabel l; //print on frame
+JButton bt;
+    /**
+     * @param args the command line arguments
+     */
+    
+    login(){
+        
+        frame= new JFrame ("Login :");//frame name titlebar
+        frame.setSize(500,200);
+        frame.setLocation(300,200);
+        frame.setLayout(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//action closed
+       
+        l = new JLabel("Enter Username");
+        l.setLocation(10,10);
+        l.setSize(l.getPreferredSize());
+        frame.add(l);
+        
+        field = new JTextField();
+        field.setSize(field.getPreferredSize());
+        field.setColumns(15);
+        
+        field.setLocation(150,10);
+        field.setToolTipText("Enter Usename");
+        frame.add(field);
+        
+        l = new JLabel("Enter Password");
+        l.setLocation(10,40);
+        l.setSize(l.getPreferredSize());
+        frame.add(l);
+        
+        ps = new JPassword();
+        ps.setSize (ps.getPreferredSize());
+        ps.setColumns(15);
+
+        ps.setLocation(150,40);
+        ps.setToolTipText("Enter Password");
+        frame.add(ps);
+        
+        bt = new JButton("Login");
+        bt.setSize (bt.getPreferredSize());
+        frame.add(bt);
+        
+        frame.setVisible(true);//visible
+        
+    }//end of constructor
+    public static void main(String[] args) {
+        // TODO code application logic here
+    new login();
+        
+    }
+    
+}
